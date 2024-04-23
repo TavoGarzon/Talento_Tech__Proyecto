@@ -1,7 +1,7 @@
-export interface MenuInfo{
-  path:string;
+export interface MenuInfoInterface {
+  path: string;
   title: string;
-  icon?:string;
-  classCss?:string;
-  subMenu?:MenuInfo[];
- }
+  icon?: string;
+  classCss?: string;
+  subMenu?: MenuInfoInterface[];
+}
