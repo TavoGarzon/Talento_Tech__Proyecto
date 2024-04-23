@@ -1,0 +1,19 @@
+.articulo {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+.articulo h1 {
+  text-align: center;
+  color: #007bff;
+}
+
+.articulo p {
+  margin-bottom: 20px;
+}
+
+.articulo iframe{
+  margin-bottom: 200px;
+}

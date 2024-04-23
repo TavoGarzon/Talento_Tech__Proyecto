@@ -12,14 +12,27 @@
 
 <body>
   <header>
-    <nav>
+    <nav class="main-menu">
       <ul>
-        <li><a routerLink="inicio">Inicio</a></li>
-        <li><a routerLink="inicio/acercade">Acerca de</a></li>
-        <li><a routerLink="inicio/articulo">Artículo</a></li>
-        <li><a routerLink="inicio/contacto">Contacto</a></li>
-        <li><a routerLink="inicio/imagenes">Imágenes</a></li>
-        <li><a routerLink="inicio/personas">Personas</a></li>
+        @for (menu of menuItems; track $index) {
+        <li [class]="menu.classCss">
+          <i [class]="menu.icon"></i>
+          <a [routerLink]="menu.path"> {{menu.title}}</a>
+        </li>
+        @if(menu.sub-menu?.length>0){
+          <h1>submenu</h1>
+          <ul class="sub-menu">
+            <li [class]="menu.classCss">
+              <i [class]="menu.icon"></i>
+              <a [routerLink]="menu.path"> {{menu.title}}</a>
+            </li>
+          </ul>
+
+        }
+
+
+      }
+
       </ul>
     </nav>
   </header>

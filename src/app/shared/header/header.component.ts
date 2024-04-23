@@ -1,13 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { MenuRoutes } from '../../menu/menu';
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [RouterLink],
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
+  menuItems: any[] = [];
 
+  ngOnInit(): void {
+    this.menuItems = MenuRoutes;
+    console.log(this.menuItems);
+    //throw new Error('Method not implemented.');
+  }
 }

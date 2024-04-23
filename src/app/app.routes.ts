@@ -5,42 +5,43 @@ import { ArticuloComponent } from './pages/articulo/articulo.component';
 import { ImagenesComponent } from './pages/imagenes/imagenes.component';
 import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
+import { PATH } from './core/enum/path.enum';
 
 
 export const routes: Routes = [
 
   {
-    path:'inicio',
+    path:PATH.HOME,
     title: 'Home',
     children: [
       //Path por defecto del path padre
       {
-        path:'',
+        path:PATH.HOME,
         title:'Home',
         component: InicioComponent
       },
       {
-        path:'personas',
+        path: PATH.PERSONA,
         title: 'Personas',
         component: PersonasComponent,
       },
       {
-        path:'imagenes',
+        path: PATH.IMAGEN,
         title: 'Imagenes',
         component: ImagenesComponent,
       },
       {
-        path:'acercade',
+        path:PATH.ACERCADE,
         title: '¿Quienes Somos?',
         component: AcercaDeComponent,
       },
       {
-        path:'contacto',
+        path:PATH.CONTACTO,
         title: 'Contacto',
         component: ContactoComponent,
       },
       {
-        path:'articulo',
+        path: PATH.ARTICULO,
         title: 'Articulo',
         component: ArticuloComponent,
       },

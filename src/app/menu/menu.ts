@@ -1,45 +1,55 @@
+import { PATH } from '../core/enum/path.enum';
 import { MenuInfoInterface } from './../core/interface/menu_info_interface';
-const MenuRoutes: MenuInfoInterface[] = [
+export const MenuRoutes: MenuInfoInterface[] = [
   {
-    path: '',
+    path: PATH.HOME,
     title: 'Home',
-    icon: '',
+    icon: 'https://fontawesome.com/icons/house?f=classic&s=solid',
     classCss: '',
     subMenu: [],
   },
   {
-    path: '',
+    path: PATH.PERSONA,
     title: 'Personas',
     icon: '',
     classCss: '',
-    subMenu: [],
+    subMenu: [
+      {
+        path: PATH.IMAGEN,
+        title: 'Imagenes',
+        icon: '',
+        classCss: '',
+        subMenu: [],
+      },
+    ],
   },
   {
-    path: '',
+    path: PATH.IMAGEN,
     title: 'Imagenes',
     icon: '',
     classCss: '',
     subMenu: [],
   },
   {
-    path: '',
+    path: PATH.ACERCADE,
     title: '¿Quines Somos?',
     icon: '',
     classCss: '',
     subMenu: [],
   },
   {
-    path: '',
+    path: PATH.CONTACTO,
     title: 'Contacto',
     icon: '',
     classCss: '',
     subMenu: [],
   },
   {
-    path: '',
+    path: PATH.ARTICULO,
     title: 'Articulo',
     icon: '',
     classCss: '',
     subMenu: [],
   },
 ];
+
