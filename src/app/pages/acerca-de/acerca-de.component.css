@@ -1,0 +1,15 @@
+.acerca-de {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: justify;
+}
+
+.acerca-de h2 {
+  text-align: center;
+  color: #007bff;
+}
+
+.acerca-de p {
+  margin-bottom: 20px;
+}
