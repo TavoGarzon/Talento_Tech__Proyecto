@@ -1,22 +1,29 @@
-import { PATH } from '../core/enum/path.enum';
+/*import { PATH } from '../core/enum/path.enum';
 import { MenuInfoInterface } from './../core/interface/menu_info_interface';
 export const MenuRoutes: MenuInfoInterface[] = [
   {
     path: PATH.HOME,
     title: 'Home',
-    icon: 'https://fontawesome.com/icons/house?f=classic&s=solid',
+    icon: '<i class="fa-solid fa-dragon"></i>',
     classCss: '',
     subMenu: [],
   },
   {
     path: PATH.PERSONA,
-    title: 'Personas',
+    title: 'Persona',
     icon: '',
     classCss: '',
     subMenu: [
       {
         path: PATH.IMAGEN,
-        title: 'Imagenes',
+        title: 'Imagen',
+        icon: '',
+        classCss: '',
+        subMenu: [],
+      },
+      {
+        path: PATH.ACERCADE,
+        title: 'Acercade',
         icon: '',
         classCss: '',
         subMenu: [],
@@ -52,4 +59,76 @@ export const MenuRoutes: MenuInfoInterface[] = [
     subMenu: [],
   },
 ];
+*/
+import { PATH } from '../core/enum/path.enum';
+import { MenuInfoInterface } from '../core/interface/menu_info_interface';
 
+export const MenuRoutes: MenuInfoInterface[] = [
+  {
+    path: PATH.HOME,
+    title: 'Home',
+    icon: 'fa-solid fa-igloo',
+    classCss: '',
+    subMenu: [],
+  },
+
+  {
+    path: PATH.PERSONA,
+    title: 'Persona',
+    icon: 'fa-solid fa-people-roof',
+    classCss: '',
+    subMenu: [
+      {
+        path: PATH.IMAGEN,
+        title: 'Imagen',
+        icon: 'fa-solid fa-panorama',
+        classCss: '',
+        subMenu: [],
+      },
+      {
+        path: PATH.ARTICULO,
+        title: 'Articulo',
+        icon: 'fa-solid fa-newspaper',
+        classCss: '',
+        subMenu: [
+          {
+            path: PATH.ARTICULO,
+            title: 'Articulo',
+            icon: 'fa-solid fa-newspaper',
+            classCss: '',
+            subMenu: [],
+          },
+        ],
+      },
+    ],
+  },
+  {
+    path: PATH.IMAGEN,
+    title: 'Imagen',
+    icon: 'fa-solid fa-panorama',
+    classCss: '',
+    subMenu: [],
+  },
+
+  {
+    path: PATH.ARTICULO,
+    title: 'Articulo',
+    icon: 'fa-solid fa-newspaper',
+    classCss: '',
+    subMenu: [],
+  },
+  {
+    path: PATH.CONTACTO,
+    title: 'Contacto',
+    icon: 'fa-solid fa-hand-holding-hand',
+    classCss: '',
+    subMenu: [],
+  },
+  {
+    path: PATH.ACERCADE,
+    title: 'Acerca De Nosotros',
+    icon: 'fa-solid fa-address-book',
+    classCss: '',
+    subMenu: [],
+  },
+];

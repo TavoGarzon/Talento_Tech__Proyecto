@@ -11,6 +11,7 @@ import { MenuRoutes } from '../../menu/menu';
 })
 export class HeaderComponent implements OnInit {
   menuItems: any[] = [];
+menu: any;
 
   ngOnInit(): void {
     this.menuItems = MenuRoutes;
