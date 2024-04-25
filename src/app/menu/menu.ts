@@ -1,3 +1,4 @@
+import { UsuariosComponent } from './../pages/usuarios/usuarios.component';
 /*import { PATH } from '../core/enum/path.enum';
 import { MenuInfoInterface } from './../core/interface/menu_info_interface';
 export const MenuRoutes: MenuInfoInterface[] = [
@@ -128,6 +129,13 @@ export const MenuRoutes: MenuInfoInterface[] = [
     path: PATH.ACERCADE,
     title: 'Acerca De Nosotros',
     icon: 'fa-solid fa-address-book',
+    classCss: '',
+    subMenu: [],
+  },
+  {
+    path: PATH.USUARIOS,
+    title: 'Usuarios',
+    icon: 'fa-solid fa-person-chalkboard',
     classCss: '',
     subMenu: [],
   },

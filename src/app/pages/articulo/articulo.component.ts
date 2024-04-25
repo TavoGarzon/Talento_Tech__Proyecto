@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './articulo.component.css'
 })
 export class ArticuloComponent {
-  nombreVideo : string = "Los Caballeros Mexicanos"
+  nombreVideo : string = "Musica Catolica"
 
 }

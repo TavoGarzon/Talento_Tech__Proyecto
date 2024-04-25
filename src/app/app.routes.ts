@@ -6,19 +6,19 @@ import { ImagenesComponent } from './pages/imagenes/imagenes.component';
 import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PATH } from './core/enum/path.enum';
+import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 
 
 export const routes: Routes = [
-
   {
-    path:PATH.HOME,
+    path: PATH.HOME,
     title: 'Home',
     children: [
       //Path por defecto del path padre
       {
-        path:PATH.HOME,
-        title:'Home',
-        component: InicioComponent
+        path: PATH.HOME,
+        title: 'Home',
+        component: InicioComponent,
       },
       {
         path: PATH.PERSONA,
@@ -31,12 +31,12 @@ export const routes: Routes = [
         component: ImagenesComponent,
       },
       {
-        path:PATH.ACERCADE,
+        path: PATH.ACERCADE,
         title: '¿Quienes Somos?',
         component: AcercaDeComponent,
       },
       {
-        path:PATH.CONTACTO,
+        path: PATH.CONTACTO,
         title: 'Contacto',
         component: ContactoComponent,
       },
@@ -45,11 +45,11 @@ export const routes: Routes = [
         title: 'Articulo',
         component: ArticuloComponent,
       },
-
-
-    ]
+      {
+        path: PATH.USUARIOS,
+        title: 'Usuarios',
+        component: UsuariosComponent,
+      },
+    ],
   },
-
-
-
 ];
