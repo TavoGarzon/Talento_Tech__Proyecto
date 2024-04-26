@@ -11,10 +11,20 @@ import { Component, Input, input } from '@angular/core';
   styleUrl: './tabla.component.css',
 })
 export class TablaComponent {
-  @Input() personas: personaInterface[] = [];
-  @Input() titulo: string = " ";
+  @Input() data: any[] = [];
+  @Input() titulo: string = '';
+  @Input() columnas: string[] = [];
 
   ngOnInit(): void {
-    console.log('Personas en el componente Hijo', this.personas);
+    console.log('Personas en el componente hijo', this.data);
+  }
+
+  formatearNombreDeColumnas(columna: string): string {
+    // Dividir el nombre por mayúsculas y unir con espacios
+    return columna.replace(/([a-z])([A-Z])/g, '$1 $2').toLocaleUpperCase();
+  }
+
+  isFecha(value: any): boolean {
+    return value instanceof Date;
   }
 }

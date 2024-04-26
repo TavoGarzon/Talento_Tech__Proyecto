@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { usuariosInterface } from '../../core/interface/usuarios.interface';
 import { TablaComponent } from '../../componets/tabla/tabla.component';
+import { personaInterface } from '../../core/interface/personas.interface';
 
 @Component({
   selector: 'app-usuarios',
@@ -9,8 +10,9 @@ import { TablaComponent } from '../../componets/tabla/tabla.component';
   templateUrl: './usuarios.component.html',
   styleUrl: './usuarios.component.css',
 })
-export class UsuariosComponent {
+export class UsuariosComponent implements OnInit {
   usuarios: usuariosInterface[] = [];
+  columnas: string[] = [];
 
   ngOnInit(): void {
     this.usuarios = [
@@ -52,5 +54,12 @@ export class UsuariosComponent {
       },
     ];
     console.log('Lista en el componente usuarios', this.usuarios);
+
+    this.obtenerColumnas(this.usuarios);
+  }
+  obtenerColumnas(usuarios: personaInterface[]) {
+    if (usuarios.length > 0) {
+      this.columnas = Object.keys(usuarios[0]);
+    }
   }
 }

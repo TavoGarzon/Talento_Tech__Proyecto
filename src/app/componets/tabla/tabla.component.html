@@ -4,25 +4,26 @@
 <table class="table table-dark table-striped">
   <thead>
     <tr>
-      <th>Nombre</th>
-      <th>Fecha de Nacimiento</th>
-      <th>Peso</th>
-      <th>Tipo Documento</th>
-      <th># Documento</th>
-      <th># Celular</th>
-      <th>Correo Electronico</th>
+      @for (columna of columnas; track $index) {
+      <ng-container>
+        <th>{{ formatearNombreDeColumnas(columna) }}</th>
+      </ng-container>
+      }
     </tr>
   </thead>
   <tbody>
-    @for (persona of personas; track $index) {
+    @for (item of data; track $index) {
+
     <tr>
-      <td>{{persona.nombre}}</td>
-      <td>{{persona.fechaNacimiento | date : 'mediumDate':'UTC' }}</td>
-      <td>{{persona.peso}}</td>
-      <td>{{persona.tipoDocumento}}</td>
-      <td>{{persona.numeroDocumento}}</td>
-      <td>{{persona.numeroCelular}}</td>
-      <td>{{persona.email}}</td>
+      @for (columna of columnas; track $index) { @if (isFecha(item[columna])) {
+      <ng-container>
+        <td>{{ item[columna] | date : "mediumDate" : "UTC" }}</td>
+      </ng-container>
+      } @else {
+      <ng-container>
+        <td>{{ item[columna] }}</td>
+      </ng-container>
+      }}
     </tr>
     }
   </tbody>

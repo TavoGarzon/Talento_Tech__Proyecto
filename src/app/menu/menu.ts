@@ -139,4 +139,11 @@ export const MenuRoutes: MenuInfoInterface[] = [
     classCss: '',
     subMenu: [],
   },
+  {
+    path: PATH.PRODUCTOS,
+    title: 'Ver Productos',
+    icon: 'fa-solid fa-person-chalkboard',
+    classCss: '',
+    subMenu: [],
+  },
 ];
