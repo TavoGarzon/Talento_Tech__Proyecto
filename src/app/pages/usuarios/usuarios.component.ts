@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { usuariosInterface } from '../../core/interface/usuarios.interface';
 import { TablaComponent } from '../../componets/tabla/tabla.component';
 import { personaInterface } from '../../core/interface/personas.interface';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-usuarios',
@@ -13,6 +14,7 @@ import { personaInterface } from '../../core/interface/personas.interface';
 export class UsuariosComponent implements OnInit {
   usuarios: usuariosInterface[] = [];
   columnas: string[] = [];
+  informacionUser: any;
 
   ngOnInit(): void {
     this.usuarios = [
@@ -61,5 +63,29 @@ export class UsuariosComponent implements OnInit {
     if (usuarios.length > 0) {
       this.columnas = Object.keys(usuarios[0]);
     }
+  }
+
+  recibirInformacionUser(user: any) {
+    this.informacionUser = user;
+    console.log('componente padre', this.informacionUser);
+    Swal.fire({
+      title: 'usera Seleccionada',
+      imageUrl: 'https://picsum.photos/id/134/200/300',
+      imageWidth: 400,
+      imageHeight: 200,
+      imageAlt: 'Custom image',
+      html: `
+        <ul class="list-goup">
+          <li class="list-goup-item text-start">Nombre: </>${user.nombre}</li>
+          <li class="list-goup-item text-start">Tipo Documento: ${user.tipoDocumento}</li>
+          <li class="list-goup-item text-start">Numero Documento: ${user.numeroDocumento}</li>
+          <li class="list-goup-item text-start">Peso: ${user.peso}</li>
+          <li class="list-goup-item text-start">Numero Celular: ${user.numeroCelular}</li>
+          <li class="list-goup-item text-start">Email: ${user.email}</li>
+          <li class="list-goup-item text-start">Fecha de Nacimiento: ${user.fechaNacimiento} </li>
+        </ul>
+             `,
+      icon: 'success',
+    });
   }
 }

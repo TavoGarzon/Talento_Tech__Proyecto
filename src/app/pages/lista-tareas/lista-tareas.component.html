@@ -1,0 +1,22 @@
+<div class="table-responsive">
+<h2>Ingreso de tareas</h2>
+  <app-formulario-agregar-tarea (tareaAgregada)="agregarTarea($event)"></app-formulario-agregar-tarea>
+
+  <h2>Lista de Tareas</h2>
+  <table class="table table-dark table-striped">
+    <thead>
+      <tr>
+        <th>Descripción</th>
+        <th>Asignado a</th>
+        <th>Fecha de terminación</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tarea of tareas">
+        <td>{{ tarea.descripcion }}</td>
+        <td>{{ tarea.asignadoA }}</td>
+        <td>{{ tarea.fechaTerminacion }}</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>

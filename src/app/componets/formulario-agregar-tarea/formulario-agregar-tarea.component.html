@@ -1,0 +1,10 @@
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label">Descripcion de la Tarea:</label>
+  <input type="text" [(ngModel)]="descripcion" class="form-control" placeholder="Ingrese el texto de la Descripción">
+  <label for="exampleFormControlInput1" class="form-label">Asignado a:</label>
+  <input type="text" [(ngModel)]="asignadoA" class="form-control" placeholder="Nombre de la persona a Asignar">
+  <label for="exampleFormControlInput1" class="form-label">Fecha de Terminacion de la tarea:</label>
+  <input type="date" [(ngModel)]="fechaTerminacion"  class="form-control" placeholder="Fecha"><br>
+  <button type="button" class="btn btn-secondary btn-lg" (click)="agregarTarea()">
+    <i class="fa-solid fa-share-from-square"></i> Agregar Tarea</button>
+</div>

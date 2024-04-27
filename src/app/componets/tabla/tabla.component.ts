@@ -1,7 +1,8 @@
 import { DatePipe } from '@angular/common';
 import { personaInterface } from '../../core/interface/personas.interface';
 import { PersonasComponent } from './../../pages/personas/personas.component';
-import { Component, Input, input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-tabla',
@@ -15,7 +16,10 @@ export class TablaComponent {
   @Input() titulo: string = '';
   @Input() columnas: string[] = [];
 
+  @Output() onInformacion: EventEmitter<any> = new EventEmitter<any>();
+
   ngOnInit(): void {
+    //this.columnas.push("acciones");
     console.log('Personas en el componente hijo', this.data);
   }
 
@@ -27,4 +31,13 @@ export class TablaComponent {
   isFecha(value: any): boolean {
     return value instanceof Date;
   }
+
+  enviarInformacion(data: any) {
+    console.log('data componente hijo', data);
+    //Emite el evento con la infomracion de DATA
+    this.onInformacion.emit(data);
+    
+  }
+
+
 }

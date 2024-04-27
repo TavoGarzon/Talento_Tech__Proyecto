@@ -142,7 +142,15 @@ export const MenuRoutes: MenuInfoInterface[] = [
   {
     path: PATH.PRODUCTOS,
     title: 'Ver Productos',
-    icon: 'fa-solid fa-person-chalkboard',
+    icon: 'fa-solid fa-person-booth',
+    classCss: '',
+    subMenu: [],
+  },
+
+  {
+    path: PATH.TAREAS,
+    title: 'Ver Tareas',
+    icon: 'fa-solid fa-list',
     classCss: '',
     subMenu: [],
   },

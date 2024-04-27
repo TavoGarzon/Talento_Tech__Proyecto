@@ -1,5 +1,15 @@
+
+
+<span style="color: blue; font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">SKU: {{informacion?.sku }}</span>
+
+<span style="color:cornflowerblue; font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">/ NOMBRE: {{informacion?.nombre }}</span>
+
+<span style="color: blue; font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">/ CANTIDAD: {{informacion?.cantidad }}</span>
+
+
 <app-tabla
   [columnas]="columnas"
   [data]="misProductos"
   [titulo]="titulo"
+  (onInformacion)="recibirInformacion($event)"
 ></app-tabla>

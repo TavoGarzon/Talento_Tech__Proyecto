@@ -1,45 +1,17 @@
 <p>inicio works!</p>
 <h1>Este es el nuevo componente - INICIO</h1>
 
-<!--<button (click)="cambioRuta()">Boton On Clic</button><br>
-<button routerLink="inicio/personas">Mostrar Con RouterLink</button><br>
-<a routerLink="/inicio">Ir Al Inicio</a><br>
-<a href="personas">
-  <button>Mostrar Con HREF</button>
-</a><br>
-<button routerLink="/articulo">Mostrar Con RouterLink Articulo</button><br><br>
-<button routerLink="/imagenes">Mostrar Con RouterLink Imagenes</button><br>-->
+<style>
+        .imagen-600 {
+            width: 300px;
+            height: 300px;
+        }
+    </style>
 
-@if (mostrarTitulo) {
-<h2>Tabla de Personas</h2>
-}
-<table>
-  <THead>
-    <tr>
-      <th>NOMBRE</th>
-      <th>EDAD</th>
-      <th>CIUDAD</th>
-      <th>DOCUMENTO</th>
-    </tr>
-</THead>
-<TBody>
-  @for (persona of personas; track $index) {
-  <tr>
-    <td>
-      {{persona.nombre}}
-    </td>
-    <td>
-      {{persona.edad}}
-    </td>
-    <td>
-      {{persona.ciudad}}
-    </td>
-    <td>
-      {{persona.documento}}
-    </td>
-  </tr>
-  }
-</TBody>
-</table>
+<body>
+<img src="assets/image/lago.jpg"  alt="Mi imagen" class="imagen-600">
+</body>
+
+
 <button class="btn btn-secondary" (click)="abriModal()">
   <i class="fa-solid fa-dragon"></i> Este es el Modal</button>

@@ -9,6 +9,7 @@ import { AcercaDeComponent } from './pages/acerca-de/acerca-de.component';
 import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PATH } from './core/enum/path.enum';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { ListaTareasComponent } from './pages/lista-tareas/lista-tareas.component';
 
 
 export const routes: Routes = [
@@ -56,6 +57,11 @@ export const routes: Routes = [
         path: PATH.PRODUCTOS,
         title: 'Productos',
         component: ProductosComponent,
+      },
+      {
+        path: PATH.TAREAS,
+        title: 'Tareas',
+        component: ListaTareasComponent,
       },
     ],
   },
