@@ -56,8 +56,7 @@ export class PersonasComponent {
         email: 'tavo_Gar88@hotmail.com',
       },
     ];
-    console.log('Lista en el componente persona', this.personas);
-    this.obtenerColumnas(this.personas);
+      this.obtenerColumnas(this.personas);
   }
   obtenerColumnas(personas: personaInterface[]) {
     if (personas.length > 0) {
@@ -67,7 +66,7 @@ export class PersonasComponent {
 
   recibirInformacionPers(person: any) {
     this.informacionPersona = person;
-    console.log('componente padre', this.informacionPersona);
+   
     Swal.fire({
       title: 'Persona Seleccionada',
       imageUrl: 'https://picsum.photos/id/124/200/300',

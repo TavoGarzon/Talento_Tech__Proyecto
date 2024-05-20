@@ -146,6 +146,13 @@ export const MenuRoutes: MenuInfoInterface[] = [
     classCss: '',
     subMenu: [],
   },
+  // {
+  //   path: PATH.CREAR_PRODUCTOS,
+  //   title: 'Crear Productos',
+  //   icon: 'fa-solid fa-person-booth',
+  //   classCss: '',
+  //   subMenu: [],
+  // },
 
   {
     path: PATH.TAREAS,

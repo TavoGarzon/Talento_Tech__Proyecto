@@ -15,7 +15,6 @@ menu: any;
 
   ngOnInit(): void {
     this.menuItems = MenuRoutes;
-    console.log(this.menuItems);
-    //throw new Error('Method not implemented.');
+   
   }
 }

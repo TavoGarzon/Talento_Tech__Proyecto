@@ -5,7 +5,10 @@
 <span style="color:cornflowerblue; font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">/ NOMBRE: {{informacion?.nombre }}</span>
 
 <span style="color: blue; font-size: 40px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">/ CANTIDAD: {{informacion?.cantidad }}</span>
-
+<br><br><br>
+<td class="text-center">
+<button class="btn btn-secondary btn-sm" (click)="crearProductos()"><i class="fa-solid fa-dragon"></i>  Crear Producto</button>
+</td>
 
 <app-tabla
   [columnas]="columnas"

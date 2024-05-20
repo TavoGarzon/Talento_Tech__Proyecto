@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ProductosComponent } from './pages/productos/productos.component';
+import { ProductosComponent } from './pages/administrar-productos/productos/productos.component';
 import { Routes } from '@angular/router';
 import { PersonasComponent } from './pages/personas/personas.component';
 import { InicioComponent } from './pages/inicio/inicio.component';
@@ -10,7 +10,7 @@ import { ContactoComponent } from './pages/contacto/contacto.component';
 import { PATH } from './core/enum/path.enum';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { ListaTareasComponent } from './pages/lista-tareas/lista-tareas.component';
-
+import { CrearproductosComponent } from './pages/administrar-productos/crearproductos/crearproductos.component';
 
 export const routes: Routes = [
   {
@@ -57,6 +57,11 @@ export const routes: Routes = [
         path: PATH.PRODUCTOS,
         title: 'Productos',
         component: ProductosComponent,
+      },
+      {
+        path: PATH.CREAR_PRODUCTOS,
+        title: 'Crear Productos',
+        component: CrearproductosComponent,
       },
       {
         path: PATH.TAREAS,
